@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{{{ meta }}}
+<head><title>{{ title }}</title></head>
+<style>
+  div {
+    position:absolute; 
+    top:40%;
+    left:40%; 
+  }
+</style>
+<body>
+  <div>
+      <p>refresh the page for random:</p>
+      <!--vue-ssr-outlet-->
+      <p>when getting "RuanAnQing" or "ruananqing" in red,</p>
+      <p>some interesting thing will be shown...</p>
+  </div>
+</body>
+
+<script>
+  window.onload = function() {
+    let ruananqing = document.getElementById("ruananqing");
+    if (ruananqing.textContent == "ruananqing" || ruananqing.textContent == "RuanAnQing") {
+      ruananqing.style.color = "red";
+      setTimeout(()=>{
+        location.href = "http://page.ruananqing.com";
+      }, 1000);
+    }
+  };
+</script>
+</html>
