@@ -5,19 +5,34 @@
 <style>
   div {
     position:absolute; 
-    top:40%;
-    left:40%; 
+    top:15%;
+    left:0%; 
+  }
+
+  body {
+    background-color: #00A0D7;
+  }
+
+  div {
+    transform: scale(0.5);
+    font-size: 400%;
+    color: white;
+  }
+  
+  #ruananaing {
+    transform: scale(0.3);
+    font-size: 1000%;
   }
 
   * {
-      transition:all 2s linear;
+      transition:all 3s linear;
   }
 </style>
 <body>
   <div>
-      <p>refresh the page for random:</p>
+      <p>refresh the page for a random:</p>
       <!--vue-ssr-outlet-->
-      <p>when getting "RuanAnQing" or "ruananqing" in red,</p>
+      <p>when getting "RuanAnQing" or "ruananqing" or "RUANANQING",</p>
       <p>some interesting thing will be shown...</p>
   </div>
 </body>
@@ -26,12 +41,15 @@
   window.onload = function() {
     let ruananqing = document.getElementById("ruananqing");
     let div = document.getElementsByTagName("div")[0];
-    if (ruananqing.textContent == "ruananqing" || ruananqing.textContent == "RuanAnQing") {
-      ruananqing.style.color = "red";
-      div.style.transform = "scale(5)";
+    if (ruananqing.textContent == "ruananqing" || ruananqing.textContent == "RuanAnQing" || ruananqing.textContent == "RUANANQING") {
       setTimeout(()=>{
-        location.href = "http://page.ruananqing.com";
-      }, 1500);
+        ruananqing.style.color = "#00A0D7";
+        div.style.transform = "scale(10)";
+        ruananqing.style.transform = "scale(15)";
+        setTimeout(()=>{
+          location.href = "http://page.ruananqing.com";
+        }, 1500);
+      }, 1000);
     }
   };
 </script>
