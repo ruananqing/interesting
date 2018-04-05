@@ -16,7 +16,7 @@
   div {
     transform: scale(0.5);
     font-size: 400%;
-    color: white;
+    color: #f6f6f6;
   }
   
   #ruananaing {
@@ -25,7 +25,7 @@
   }
 
   * {
-      transition:all 3s linear;
+      transition:all 2.5s ease;
   }
 </style>
 <body>
@@ -41,15 +41,20 @@
   window.onload = function() {
     let ruananqing = document.getElementById("ruananqing");
     let div = document.getElementsByTagName("div")[0];
+    let body = document.getElementsByTagName("body")[0];
+    let WPwhite = "#f6f6f6";
     if (ruananqing.textContent == "ruananqing" || ruananqing.textContent == "RuanAnQing" || ruananqing.textContent == "RUANANQING") {
       setTimeout(()=>{
-        ruananqing.style.color = "#00A0D7";
-        div.style.transform = "scale(10)";
-        ruananqing.style.transform = "scale(15)";
+        ruananqing.style.color = WPwhite;
+        body.style.backgroundColor = WPwhite;
+        div.style.transform = "scale(4)";
         setTimeout(()=>{
           location.href = "http://page.ruananqing.com";
         }, 1500);
       }, 1000);
+    } else {
+      body.style.backgroundColor = WPwhite;
+      div.style.color = "#00A0D7";
     }
   };
 </script>
