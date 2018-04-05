@@ -8,6 +8,10 @@
     top:40%;
     left:40%; 
   }
+
+  * {
+      transition:all 2s linear;
+  }
 </style>
 <body>
   <div>
@@ -21,11 +25,13 @@
 <script>
   window.onload = function() {
     let ruananqing = document.getElementById("ruananqing");
+    let div = document.getElementsByTagName("div")[0];
     if (ruananqing.textContent == "ruananqing" || ruananqing.textContent == "RuanAnQing") {
       ruananqing.style.color = "red";
+      div.style.transform = "scale(5)";
       setTimeout(()=>{
         location.href = "http://page.ruananqing.com";
-      }, 1000);
+      }, 1500);
     }
   };
 </script>
