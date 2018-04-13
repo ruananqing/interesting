@@ -10,13 +10,13 @@
   }
 
   body {
-    background-color: #00A0D7;
+    background-color: #dd9933;
   }
 
   div {
     transform: scale(0.5);
     font-size: 400%;
-    color: #f6f6f6;
+    color: #ffffff;
   }
   
   #ruananaing {
@@ -42,7 +42,8 @@
     let ruananqing = document.getElementById("ruananqing");
     let div = document.getElementsByTagName("div")[0];
     let body = document.getElementsByTagName("body")[0];
-    let WPwhite = "#f6f6f6";
+    let WPwhite = "#ffffff";
+    let UnWhite = "#dd9933";
     if (ruananqing.textContent == "ruananqing" || ruananqing.textContent == "RuanAnQing" || ruananqing.textContent == "RUANANQING") {
       setTimeout(()=>{
         ruananqing.style.color = WPwhite;
@@ -54,7 +55,7 @@
       }, 1000);
     } else {
       body.style.backgroundColor = WPwhite;
-      div.style.color = "#00A0D7";
+      div.style.color = UnWhite;
     }
   };
 </script>
